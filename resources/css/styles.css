@@ -1,0 +1,194 @@
+:root {
+  --main-bg-color: #023047;
+  --secondary-bg-color: #219ebc;
+  --main-text-color: #8ecae6;
+  --main-title-color: #ffb703;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-size: 18px;
+}
+
+/* Header and footer styles */
+header,
+footer {
+  background-color: var(--secondary-bg-color);
+  color: var(--main-title-color);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  align-items: center;
+  gap: 25px;
+  padding: 25px;
+}
+
+li {
+  text-transform: uppercase;
+  text-shadow: 0px 0px 0px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: var(--main-title-color);
+}
+
+/* Header & footer tablet design */
+
+@media (min-width: 480px) {
+  ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  li {
+    font-size: 20px;
+  }
+}
+
+/* Header & footer desktop design */
+
+@media (min-width: 1024px) {
+  li {
+    font-size: 30px;
+  }
+  header,
+  footer {
+    padding: 30px;
+  }
+}
+
+/* Hero section */
+
+.hero {
+  background-color: var(--main-title-color);
+  color: var(--main-text-color);
+  text-align: center;
+  padding-top: 60%;
+  padding-bottom: 60%;
+  margin-bottom: 50px;
+}
+
+.hero--title {
+  background-color: #02304780;
+  padding: 20px;
+}
+
+.hero--information {
+  margin-top: 50px;
+  color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 5px 25px;
+}
+
+.hero--information--para {
+  line-height: 1.5;
+}
+
+.hero--information--para--link {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Hero tablet design */
+
+@media (min-width: 480px) {
+  .hero--title {
+    font-size: 2.5rem;
+  }
+  .hero--information {
+    font-size: larger;
+  }
+}
+
+/* Hero desktop design */
+
+@media (min-width: 1024px) {
+  .hero {
+    padding-top: 40%;
+    padding-bottom: 40%;
+  }
+  .hero--title {
+    font-size: 4rem;
+  }
+  .hero--information--title {
+    font-size: 2.75rem;
+  }
+  .hero--information--para {
+    font-size: 2rem;
+  }
+  .hero--information--para--link {
+    font-size: 2.2rem;
+  }
+}
+
+/* Gallery styles */
+
+.gallery {
+  display: flex;
+  flex-flow: column wrap;
+  overflow: hidden;
+  gap: 25px;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.gallery--card--img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Quote section */
+
+.quote {
+  background-color: var(--main-title-color);
+  color: var(--main-bg-color);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.quote--author,
+.quote--content {
+  padding: 25px;
+}
+
+.quote--content {
+  margin-bottom: 20px;
+}
+
+.quote--author {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  width: 100%;
+}
+
+/* Quote section tablet design */
+
+@media (min-width: 480px) {
+  .quote--author {
+    font-size: larger;
+  }
+}
+
+/* Quote section desktop design */
+
+@media (min-width: 1024px) {
+  .quote {
+    font-size: 2.2rem;
+  }
+  .gallery--title {
+    font-size: 3rem;
+  }
+}
